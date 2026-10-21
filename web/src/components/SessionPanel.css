@@ -1,0 +1,63 @@
+.session {
+  padding: var(--space-5) var(--space-6);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.session__hero {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin: var(--space-3) 0 var(--space-5);
+}
+
+.session__number {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.session__caption { font-weight: 500; }
+
+.session__sub {
+  display: block;
+  margin-top: 2px;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.session__stats {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.session__stats div {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.session__stats dt { color: var(--text-secondary); }
+.session__stats dd { font-weight: 500; font-variant-numeric: tabular-nums; }
+
+.session__luck {
+  margin-top: var(--space-2);
+  font-size: 0.8125rem;
+  color: var(--text-faint);
+}
+
+.session__profile {
+  margin-top: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--muted);
+  line-height: 1.45;
+}

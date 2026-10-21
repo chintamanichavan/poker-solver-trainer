@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: poker-solver-trainer:0.1.0
+    container_name: poker-solver-trainer
+    restart: unless-stopped
+    ports:
+      - "5178:80"

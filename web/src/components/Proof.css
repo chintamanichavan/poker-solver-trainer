@@ -1,0 +1,40 @@
+.proof {
+  padding: var(--space-6);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.proof__lead {
+  max-width: 62ch;
+  margin-top: var(--space-3);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.proof__tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin: var(--space-6) 0;
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.proof__tiles dt { font-size: 0.8125rem; color: var(--text-secondary); }
+
+.proof__tiles dd {
+  margin: var(--space-1) 0;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.proof__tiles p { font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.45; }
+
+@media (max-width: 640px) {
+  .proof__tiles { grid-template-columns: 1fr; gap: var(--space-4); }
+}

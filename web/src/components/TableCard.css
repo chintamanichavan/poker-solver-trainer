@@ -1,0 +1,73 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.table__seat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  animation: deal 420ms var(--ease) both;
+}
+
+.table__seat--hero { animation-delay: 90ms; }
+
+@keyframes deal {
+  from { opacity: 0; transform: translateX(48px) rotate(5deg); }
+}
+
+.table__story {
+  min-height: 3em;
+  max-width: 34ch;
+  text-align: center;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.table__latest { color: var(--text); font-weight: 500; }
+
+.table__actions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ─── Opening ─── */
+
+.table--opening { padding-top: var(--space-4); text-align: center; }
+
+.table__film {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  /* The film is rendered on white; multiply hides any trace of its edge. */
+  mix-blend-mode: multiply;
+}
+
+.table__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.table__lead {
+  max-width: 44ch;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .table__seat { animation: none; }
+}
